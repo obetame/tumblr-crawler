@@ -3,7 +3,7 @@ const rq = require("request-promise");
 const jsonfile = require('jsonfile');
 const chalk = require('chalk');
 const formatData = require("./formatData");
-const {cookie,headers,limit} = require("../config");
+const {cookie,headers,limit,skip} = require("../config");
 const name = "follow";// store json name
 
 // Get data from a single page
@@ -18,7 +18,7 @@ let rootID = 0;//data id
  * @param  {Number} index [description]
  * @return {[type]}       [description]
  */
-let UseUrlGetData = (item,page=1,index=0)=>{
+let UseUrlGetData = (item,page=1,index=skip)=>{
 	return new Promise((resolve,reject)=>{
 		if(item.length===index){
 			// No data.
@@ -74,15 +74,15 @@ let UseUrlGetData = (item,page=1,index=0)=>{
 }
 
 function getData(name="follow"){
-	console.log(chalk.blue("This step will get a lot of data,So it takes a lot of time,You can open the data folder to view the video.json file."));
 	try{
 		const followData = require("./data/"+name+".js");
+		console.log(chalk.blue("This step will get a lot of data,So it takes a lot of time,You can open the data folder to view the video.json file."));
 		return UseUrlGetData(followData);
 	}
 	catch(e){
-		console.log(chalk.red("No this file:"+name));
+		console.log(chalk.red("No this file:"+name+".js"));
 		return null;
 	}
 }
 
-// getData();
+getData();

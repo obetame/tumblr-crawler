@@ -3,7 +3,6 @@ const rq = require("request-promise");
 const jsonfile = require('jsonfile');
 const chalk = require('chalk');
 const formatData = require("./formatData");
-const getVideoCode = require("./getVideoCode");
 const {cookie,headers} = require("../config");
 const file = "./data/follow.json";//储存json
 

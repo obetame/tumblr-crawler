@@ -6,6 +6,14 @@ Just a Crawler 😁 , can be downloaded automatically.
 Fill in the cookie in the `./config.js` file (with your own).
 
 `limit`:Limit crawler crawling data,default is 0(mean no limit).
+`skip`:Skip the specified number.
+
+For example, I would like to download 2 from the beginning of the 4,I can do this:
+
+```js
+limit:2,
+skip:4
+```
 
 ## Use
 
