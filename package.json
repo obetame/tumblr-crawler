@@ -1,0 +1,33 @@
+{
+  "name": "tumblr-crawler",
+  "version": "1.0.0",
+  "description": "Just a Crawler 😁 , can be downloaded automatically.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./Crawler/tumblr.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://zhouyuexie@github.com/zhouyuexie/tumblr-crawler.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "zhouyuexie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhouyuexie/tumblr-crawler/issues"
+  },
+  "homepage": "https://github.com/zhouyuexie/tumblr-crawler#readme",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "download": "^5.0.2",
+    "jsonfile": "^2.4.0",
+    "mongoose": "^4.6.8",
+    "request": "^2.78.0",
+    "request-promise": "^4.1.1",
+    "underscore": "^1.8.3",
+    "xml2js": "^0.4.17",
+    "xml2json": "^0.10.0"
+  }
+}
