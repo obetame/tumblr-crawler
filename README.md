@@ -23,6 +23,10 @@ Install dependency before use:`npm install`
 2. step_two:`npm run step_one`.
 3. step_three:`npm run step_three`.
 
+## chinese
+
+You can switch Chinese version:`git checkout chinese`
+
 ## MIT
 
 This library provides only learning and communication.If you feel this library infringes your rights please contact me😜.
