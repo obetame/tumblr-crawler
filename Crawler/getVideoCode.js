@@ -23,12 +23,12 @@ let UseUrlGetData = (item,page=1,index=skip)=>{
 		if(item.length===index){
 			// No data.
 			console.log(chalk.green("complete! All gain:"+rootID));
-			formatData("./data/video.json","video");
+			formatData("./Crawler/data/video.json","video");
 			return null;
 		}
-		if(limit!==0&&index>limit){
+		if(limit!==0&&index>=limit){
 			console.log(chalk.green("complete limit index:"+limit+", All gain:"+rootID));
-			formatData("./data/video.json","video");
+			formatData("./Crawler/data/video.json","video");
 			return null;
 		}
 		else{
@@ -59,7 +59,7 @@ let UseUrlGetData = (item,page=1,index=skip)=>{
 
 				let StoreArray = [];
 				for(let i=0;i<AllData.length;i++){
-					jsonfile.writeFileSync("./data/video.json", {
+					jsonfile.writeFileSync("./Crawler/data/video.json", {
 						id:++rootID,
 						mp4Code:AllData[i],
 						fullUrl:"https://vtt.tumblr.com/"+AllData[i]+".mp4#_=_",
