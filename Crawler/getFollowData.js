@@ -4,7 +4,7 @@ const jsonfile = require('jsonfile');
 const chalk = require('chalk');
 const formatData = require("./formatData");
 const {cookie,headers} = require("../config");
-const file = "./data/follow.json";//储存json
+const file = "./Crawler/data/follow.json";//储存json
 
 if(cookie===""){
 	console.log(chalk.red("require a cookie!!"));

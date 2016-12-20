@@ -21,7 +21,7 @@ function fromatData(path,name){
 		const start = "let Data =[";
 		const end = "];module.exports = Data;";
 
-		fs.writeFile("./data/"+name+".js",start+data+end,(error)=>{
+		fs.writeFile("./Crawler/data/"+name+".js",start+data+end,(error)=>{
 			if(!error){
 				console.log(chalk.green("follow.js file ready to start use."));
 				Promise.resolve();

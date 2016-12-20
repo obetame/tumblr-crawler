@@ -25,7 +25,7 @@ function getJsonDownload(place=0){
 
 function DownVideo(mp4Code){
 	return download("https://vtt.tumblr.com/"+mp4Code+".mp4#_=_").then(data => {
-	  fs.writeFile("./video/"+mp4Code+'.mp4', data,(error)=>{
+	  fs.writeFile("./Crawler/video/"+mp4Code+'.mp4', data,(error)=>{
 	  	Promise.resolve();
 	  });
 	})
