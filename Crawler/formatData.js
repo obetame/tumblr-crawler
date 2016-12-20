@@ -4,7 +4,7 @@ const jsonfile = require('jsonfile');
 const chalk = require('chalk');
 const fs = require("fs");
 
-function fromatData(path){
+function fromatData(path,name){
 	return new Promise((resolve,reject)=>{
 		fs.readFile(path,(error,data)=>{
 			if(error){
@@ -17,11 +17,11 @@ function fromatData(path){
 			}
 		})
 	}).then(data=>{
-		// 定义数据
+		// define data
 		const start = "let Data =[";
 		const end = "];module.exports = Data;";
 
-		fs.writeFile("./data/follow.js",start+data+end,(error)=>{
+		fs.writeFile("./data/"+name+".js",start+data+end,(error)=>{
 			if(!error){
 				console.log(chalk.green("follow.js file ready to start use."));
 				Promise.resolve();

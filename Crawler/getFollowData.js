@@ -3,13 +3,19 @@ const rq = require("request-promise");
 const jsonfile = require('jsonfile');
 const chalk = require('chalk');
 const formatData = require("./formatData");
+const getVideoCode = require("./getVideoCode");
 const {cookie,headers} = require("../config");
 const file = "./data/follow.json";//储存json
 
-// 获取关注人的页面数据
+if(cookie===""){
+	console.log(chalk.red("require a cookie!!"));
+	return;
+}
+
+// Get people's attention page data
 // http:\/\/[\w]*\.tumblr\.com\/
 // https://www.tumblr.com/following
-/** all 是固定字段,每一页自动加25 */
+/** all Is a fixed field, each page automatically add 25 */
 function getFollowData(page=0,all=25){
 	request({
 		url:"https://www.tumblr.com/following/"+page*all,
@@ -18,12 +24,12 @@ function getFollowData(page=0,all=25){
 	},(error,httpResponse,body)=>{
 		if(error){
 			console.log(chalk.red("request error,i will continue try."));
-			getFollowData();//继续这一页
+			getFollowData();//Continue on this page
 			return;
 		}
-		let trimData = JSON.stringify(body).replace(/\s/g,"");//去掉空格
-		let AllData = trimData.match(/http:\/\/[\w]*\.tumblr\.com\//gi);//页面上所有的视频code
-		let moreDate = trimData.match(/controlsbottom/gi);//查看是否还有下一页
+		let trimData = JSON.stringify(body).replace(/\s/g,"");//Remove spaces
+		let AllData = trimData.match(/http:\/\/[\w]*\.tumblr\.com\//gi);//All video on page code
+		let moreDate = trimData.match(/controlsbottom/gi);//See if there is another page
 
 		// console.log(AllData);
 		let StoreArray = [];
@@ -37,15 +43,17 @@ function getFollowData(page=0,all=25){
 				getFollowData(++page);
 			}
 			else{
-				// 已经获取完所有的数据
+				// All data has been acquired
 				console.log(chalk.red("no more data."));
-				formatData(file);
+				formatData(file,"follow").then(()=>{
+					console.log(chalk.blue("you can start get video code."));
+				});
 			}
 		})
 	})
 }
 
-// 存储关注的人
+// Storage concern
 let StoreFollows = (url) =>{
 	return new Promise((resolve,reject)=>{
 		jsonfile.writeFile(file, {

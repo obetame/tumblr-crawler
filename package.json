@@ -4,7 +4,9 @@
   "description": "Just a Crawler 😁 , can be downloaded automatically.",
   "main": "index.js",
   "scripts": {
-    "start": "node ./Crawler/tumblr.js"
+    "step_one": "node ./Crawler/getFollowData.js",
+    "step_two": "node ./Crawler/getVideoCode.js",
+    "step_three":"node ./Crawler/Download.js"
   },
   "repository": {
     "type": "git",
