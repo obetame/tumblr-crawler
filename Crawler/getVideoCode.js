@@ -2,13 +2,21 @@ const request = require('request');
 const rq = require("request-promise");
 const jsonfile = require('jsonfile');
 const chalk = require('chalk');
+const fs = require("fs");
 const formatData = require("./formatData");
 const {cookie,headers,limit,skip} = require("../config");
 const name = "follow";// store json name
 
+fs.writeFile("./Crawler/data/video.json","",(error)=>{
+	if(!error){
+		console.log(chalk.blue("Clear video.json file."))
+	}
+})
+
 // Get data from a single page
 let errorNumber = 0;//error number
 let rootID = 0;//data id
+let ItemNumber = 0;//already download item number
 // tumblr_[\da-z]{17}
 // http://qiao815.tumblr.com/page/2
 /**
@@ -26,7 +34,7 @@ let UseUrlGetData = (item,page=1,index=skip)=>{
 			formatData("./Crawler/data/video.json","video");
 			return null;
 		}
-		if(limit!==0&&index>=limit){
+		if(limit!==0 && ItemNumber>=limit){
 			console.log(chalk.green("complete limit index:"+limit+", All gain:"+rootID));
 			formatData("./Crawler/data/video.json","video");
 			return null;
@@ -39,9 +47,10 @@ let UseUrlGetData = (item,page=1,index=skip)=>{
 			},(error,httpResponse,body)=>{
 				if(error){
 					errorNumber++;
-					if(errorNumber>20){
+					if(errorNumber>10){
 						// Error number greater than 10 on the next
 						errorNumber = 0;
+						ItemNumber++;
 						UseUrlGetData(item,0,++index);
 						return;
 					}
@@ -53,6 +62,7 @@ let UseUrlGetData = (item,page=1,index=skip)=>{
 				let AllData = trimData.match(/tumblr_[\da-z]{17}/gi);// All video on page code
 				if(!AllData){
 					errorNumber = 0;
+					ItemNumber++;
 					UseUrlGetData(item,0,++index);
 					return;
 				}
