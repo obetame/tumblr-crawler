@@ -35,6 +35,8 @@ Install dependency before use:`npm install`
 
 ![step_three](https://github.com/zhouyuexie/tumblr-crawler/blob/master/picture/git3_Fotor.png)
 
+**Some video has failed, the program will prompt skip and continue the next.**
+
 ## Chinese
 
 你可以切换到中文版本的README分支,不过更新会延迟:`git checkout chinese`.
