@@ -20,7 +20,7 @@ skip:4
 使用前请先按照依赖:`npm install`
 
 1. step_one:`npm run step_one`.
-2. step_two:`npm run step_one`.
+2. step_two:`npm run step_two`.
 3. step_three:`npm run step_three`.
 
 ## MIT
