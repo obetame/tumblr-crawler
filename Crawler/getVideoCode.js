@@ -86,3 +86,4 @@ function getData(name="follow"){
 }
 
 getData();
+// module.exports = getData;
