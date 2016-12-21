@@ -37,7 +37,7 @@ Install dependency before use:`npm install`
 
 ## Chinese
 
-你可以切话到中文版本的README分支,不过更新会延迟:`git checkout chinese`.
+你可以切换到中文版本的README分支,不过更新会延迟:`git checkout chinese`.
 
 ## MIT
 
