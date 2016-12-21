@@ -3,10 +3,12 @@ Just a Crawler 😁 , can be downloaded automatically.
 
 ## Configuation
 
-Fill in the cookie in the `./config.js` file (with your own).
+Fill in the `cookie` in the `./config.js` file (with your own).
 
-`limit`:Limit crawler crawling data,default is 0(mean no limit).
-`skip`:Skip the specified number.
+> Open the [tumblr.com](www.tumblr.com) site press F12 to open the console select Network, click on a link below, in the request header to find your cookie, copy paste to the `./config.js` file.
+
+1. `limit`:Limit crawler crawling data,default is 0(mean no limit).
+2. `skip`:Skip the specified number.
 
 For example, I would like to download 2 from the beginning of the 4,I can do this:
 
@@ -23,6 +25,8 @@ Install dependency before use:`npm install`
 
 ![step_one](https://github.com/zhouyuexie/tumblr-crawler/blob/master/picture/git1_Fotor.png)
 
+**If you take the first step and succeed, then you don't need to do it again.**
+
 2. step_two:`npm run step_two`.
 
 ![step_two](https://github.com/zhouyuexie/tumblr-crawler/blob/master/picture/git2_Fotor.png)
@@ -31,9 +35,9 @@ Install dependency before use:`npm install`
 
 ![step_three](https://github.com/zhouyuexie/tumblr-crawler/blob/master/picture/git3_Fotor.png)
 
-## chinese
+## Chinese
 
-You can switch Chinese version:`git checkout chinese`
+你可以切话到中文版本的README分支,不过更新会延迟:`git checkout chinese`.
 
 ## MIT
 
