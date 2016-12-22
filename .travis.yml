@@ -1,6 +1,9 @@
+sudo: required
 language: node_js
 node_js :
   - "6"
   - "iojs"
 before_script :
   - npm install -g npm
+install :
+  - npm install
