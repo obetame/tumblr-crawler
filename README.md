@@ -1,6 +1,12 @@
 # tumblr-crawler
 Just a Crawler 😁 , can be downloaded automatically.
 
+## Chinese
+
+你可以切换到中文版本的README分支,不过更新可能会延迟:`git checkout chinese`.
+
+或者点击这里查看[中文文档](https://github.com/zhouyuexie/tumblr-crawler/blob/chinese/README.md)
+
 ## Configuation
 
 Fill in the `cookie` in the `./config.js` file (with your own).
@@ -36,10 +42,6 @@ Install dependency before use:`npm install`
 ![step_three](https://github.com/zhouyuexie/tumblr-crawler/blob/master/picture/git3_Fotor.png)
 
 **Some video has failed, the program will prompt skip and continue the next.**
-
-## Chinese
-
-你可以切换到中文版本的README分支,不过更新会延迟:`git checkout chinese`.
 
 ## MIT
 
