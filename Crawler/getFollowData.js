@@ -45,7 +45,7 @@ function getFollowData(page=0,all=25){
 				// All data has been acquired
 				console.log(chalk.red("no more data."));
 				formatData(file,"follow").then(()=>{
-					console.log(chalk.blue("you can start get video code."));
+					console.log(chalk.blue("Now you can start npm run step_two."));
 				});
 			}
 		})
