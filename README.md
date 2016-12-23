@@ -21,7 +21,7 @@ skip:4
 
 ## Use
 
-使用前请先按照依赖:`npm install`
+使用前请先按照依赖:`npm install`.(你需要安装[NodeJS](https://nodejs.org/zh-cn/))
 
 1. step_one:`npm run step_one`.
 
