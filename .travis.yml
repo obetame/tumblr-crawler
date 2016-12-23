@@ -6,4 +6,5 @@ node_js :
 before_script :
   - npm install -g npm
 install :
-  - npm install
+  - sudo apt-get install build-essential
+  - apt-get install libkrb5-dev
