@@ -21,7 +21,8 @@ skip:4
 
 ## Use
 
-使用前请先按照依赖:`npm install`.(你需要安装[NodeJS](https://nodejs.org/zh-cn/))
+1. 克隆库`git clone https://github.com/zhouyuexie/tumblr-crawler.git`
+2. 安装依赖:`npm install`.
 
 1. step_one:`npm run step_one`.
 
