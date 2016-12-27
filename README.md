@@ -25,19 +25,33 @@ skip:4
 
 ## Use
 
-Install dependency before use:`npm install`
+1. clone it:`git clone https://github.com/zhouyuexie/tumblr-crawler.git`
+2. Install dependency:`npm install`
 
-1. step_one:`npm run step_one`.
+
+### step_one
+
+```shell
+npm run step_one
+```
 
 ![step_one](https://github.com/zhouyuexie/tumblr-crawler/blob/master/picture/git1_Fotor.png)
 
 **If you take the first step and succeed, then you don't need to do it again.**
 
-2. step_two:`npm run step_two`.
+### step_two
+
+```shell
+npm run step_two
+```
 
 ![step_two](https://github.com/zhouyuexie/tumblr-crawler/blob/master/picture/git2_Fotor.png)
 
-3. step_three:`npm run step_three`.
+### step_three
+
+```shell
+npm run step_three
+```
 
 ![step_three](https://github.com/zhouyuexie/tumblr-crawler/blob/master/picture/git3_Fotor.png)
 
