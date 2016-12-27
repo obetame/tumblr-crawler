@@ -24,19 +24,31 @@ skip:4
 1. 克隆库`git clone https://github.com/zhouyuexie/tumblr-crawler.git`
 2. 安装依赖:`npm install`.
 
-1. step_one:`npm run step_one`.
+### step_one
+
+```shell
+npm run step_one
+```
 
 ![step_one](https://github.com/zhouyuexie/tumblr-crawler/blob/master/picture/git1_Fotor.png)
 
 **注意:这一步是获取你所有的关注人信息,所以一般只需要获取一次,也就是说这个命令你只执行一次就可以了.**
 
-2. step_two:`npm run step_two`.
+### step_two
+
+```shell
+npm run step_two
+```
 
 ![step_two](https://github.com/zhouyuexie/tumblr-crawler/blob/master/picture/git2_Fotor.png)
 
 **这一步是获取所有关注人的视频代码,时间会比较长,可以使用配置文件中的limit,skip来控制.**
 
-3. step_three:`npm run step_three`.
+### step_three
+
+```shell
+npm run step_three
+```
 
 ![step_three](https://github.com/zhouyuexie/tumblr-crawler/blob/master/picture/git3_Fotor.png)
 
